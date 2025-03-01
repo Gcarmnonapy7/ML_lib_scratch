@@ -10,7 +10,6 @@ def euclidean_distance(x1,x2):
     Euclidean distance formula in numpy
     '''
     return np.sqrt(np.sum(x1-x2)**2)
-
 class KNN(BasicModel):
 
     def __init__(self, k=3):
