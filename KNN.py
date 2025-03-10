@@ -1,4 +1,3 @@
-from main import BasicModel
 import numpy as np
 from collections import Counter
 #K-Nearest Neighbors Algorithm
@@ -10,7 +9,7 @@ def euclidean_distance(x1,x2):
     Euclidean distance formula in numpy
     '''
     return np.sqrt(np.sum(x1-x2)**2)
-class KNN(BasicModel):
+class KNN():
 
     def __init__(self, k=3):
         self.nearest_n = k  # Number of neighbors
