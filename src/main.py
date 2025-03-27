@@ -1,6 +1,3 @@
-import numpy as np
-
-
 class BasicModel:
     def fit(self,X,Y):
         pass
@@ -8,11 +5,3 @@ class BasicModel:
         pass
     def score(self,X,Y):
         pass
-
-
-
-
-
-
-
-
