@@ -24,10 +24,10 @@ class LinearRegression() :
 
         for i in range(self.n_inters):
             #Approximate and updating the weight and bias // need the dx/dw and dx/db (Loss function)
-            y_predict = np.dot(x,self.weight) + self.bias #predictions // Line equation
+            y_hat = np.dot(x,self.weight) + self.bias #predictions // Line equation
 
-            dw = (1/n_samples) * np.dot(x.T,(y_predict-y)) # gradient of self.weight // x.T is the transpose matrix
-            db = (1/n_samples) * np.sum(y_predict - y) #gradient of self.bias
+            dw = (1/n_samples) * np.dot(x.T,(y_hat-y)) # gradient of self.weight // x.T is the transpose matrix
+            db = (1/n_samples) * np.sum(y_hat - y) #gradient of self.bias
 
             #Update the weights and bias
             self.weight -= self.learning_rate * dw
@@ -35,13 +35,13 @@ class LinearRegression() :
 
             if i % 100 == 0:
                 #Print the loss after 100 n_iterations
-                Loss = self.mse(y,y_predict)
+                Loss = self.mse(y,y_hat)
                 print(f"Iteration number{i} and Loss equals : {Loss}")
 
     def  predict(self,x):
         """predict -> line equation return """
-        y_predict = np.dot(x,self.weight) + self.bias
-        return y_predict
+        y_hat = np.dot(x,self.weight) + self.bias
+        return y_hat
 
     def mse(self,y_real,y):
         """Mean Squared error"""
