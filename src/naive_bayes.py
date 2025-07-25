@@ -9,7 +9,7 @@ class NaiveBayes:
         self.priors = None
         self.classes = None
         self.mean = None
-        self.std = None  #variances
+        self.std = None 
         
     def fit(self,x,y):
         

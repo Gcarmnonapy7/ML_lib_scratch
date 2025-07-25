@@ -1,8 +1,5 @@
 import numpy as np
 from collections import Counter
-#K-Nearest Neighbors Algorithm
-#The basic idea is determined a class of a sample based in the nearest neighbors labels
-#And predict the label by the most common label near the sample => using the Euclidean distance
 
 def euclidean_distance(x1,x2):
     '''
