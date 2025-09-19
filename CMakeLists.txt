@@ -21,10 +21,10 @@ include_directories(${PROJECT_SOURCE_DIR}/include)
 
 #Source files 
 
-set(SOURCES 
-    src/knn.cpp
-    #src/bindings.cpp only when i finish the first implementation of the lib
-    )
+# set(SOURCES 
+#     src/knn.cpp
+#     #src/bindings.cpp only when i finish the first implementation of the lib
+#     )
 
 #Static lib at first
 add_library(my_ml_lib STATIC${SOURCES})
